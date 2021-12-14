@@ -11,6 +11,7 @@
 		0212DF12275F1697009C525D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DF11275F1697009C525D /* ContentView.swift */; };
 		0212DF14275F1699009C525D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0212DF13275F1699009C525D /* Assets.xcassets */; };
 		0212DF17275F1699009C525D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0212DF16275F1699009C525D /* Preview Assets.xcassets */; };
+		0212DF1E275F16C2009C525D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212DF1D275F16C2009C525D /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0212DF11275F1697009C525D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0212DF13275F1699009C525D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0212DF16275F1699009C525D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0212DF1D275F16C2009C525D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				0212DF11275F1697009C525D /* ContentView.swift */,
 				0212DF13275F1699009C525D /* Assets.xcassets */,
 				0212DF15275F1699009C525D /* Preview Content */,
+				0212DF1D275F16C2009C525D /* AppDelegate.swift */,
 			);
 			path = MetricKitPrototype;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0212DF1E275F16C2009C525D /* AppDelegate.swift in Sources */,
 				0212DF12275F1697009C525D /* ContentView.swift in Sources */,
 				0212DF10275F1697009C525D /* MetricKitPrototypeApp.swift in Sources */,
 			);
