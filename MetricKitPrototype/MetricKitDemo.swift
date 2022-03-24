@@ -20,20 +20,10 @@ struct MetricKitDemo: View {
     }
 }
 
-struct StarkeyModelList_Previews: PreviewProvider {
+struct MetricKitDemo_Previews: PreviewProvider {
     static var previews: some View {
         MetricKitDemo()
     }
 }
 
-extension MetricKitDemo: MXMetricManagerSubscriber {
-  func didReceive(_ payloads: [MXMetricPayload]) {
-    guard let firstPayload = payloads.first else { return }
-    print(firstPayload.dictionaryRepresentation())
-  }
-  
-  func didReceive(_ payloads: [MXDiagnosticPayload]) {
-    guard let firstPayload = payloads.first else { return }
-    print(firstPayload.dictionaryRepresentation())
-  }
-}
+
