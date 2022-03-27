@@ -22,11 +22,24 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 extension AppDelegate: MXMetricManagerSubscriber {
   func didReceive(_ payloads: [MXMetricPayload]) {
     guard let firstPayload = payloads.first else { return }
+    print("MXMeterixPayload Recieve")
     print(firstPayload.dictionaryRepresentation())
-  }
-  
-  func didReceive(_ payloads: [MXDiagnosticPayload]) {
-    guard let firstPayload = payloads.first else { return }
-    print(firstPayload.dictionaryRepresentation())
+    os_log("Received Daily MXDiagnosticPayload:", type: .debug)
+    for diagnosticPayload in payloads {
+      if let diagnosticPayloadJsonString = String(data: diagnosticPayload.jsonRepresentation(), encoding: .utf8) {
+        
+        os_log("%@", type: .debug, diagnosticPayloadJsonString)
+        print("OS Log Payload: \(diagnosticPayloadJsonString)")
+        
+        // Here you could upload these metrics (in JSON form) to your servers to aggregate app performance metrics
+      }
+      
+    }
+    
+    func didReceive(_ payloads: [MXDiagnosticPayload]) {
+      print("MXDiagnosticPayload Recieve")
+      guard let firstPayload = payloads.first else { return }
+      print(firstPayload.dictionaryRepresentation())
+    }
   }
 }
